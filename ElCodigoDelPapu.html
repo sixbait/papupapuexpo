@@ -1,0 +1,146 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furgoneta de Escape - Robo al Banco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2b2b2b;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .ficha-auto {
+            border: 2px solid #e3e3e3;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #3a3a3a;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .ficha-auto h1 {
+            color: #e3e3e3;
+        }
+
+        .especificaciones {
+            background-color: black; /* El color que ocultará el número */
+            color: #ff0000; /* Aquí se cambia el color para que coincida con el background */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        /* Número oculto */
+        .especificaciones span {
+            background-color: #000000; /* Color que oculta el número */
+            color: #000000; /* Texto oculto (negro sobre negro) */
+        }
+
+        /* Revelar el número al pasar el cursor */
+        .especificaciones span:hover {
+            color: #ff0000; /* Cambia el color del texto para que se vea */
+        }
+
+        /* Al cambiar este color de fondo, se revela el número */
+        .otluco-oremun {
+            background-color: red;
+            color: red;
+        }
+
+        .input-section {
+            margin-top: 30px;
+        }
+
+        .input-section input {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #e3e3e3;
+        }
+
+        .input-section button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #3a3a3a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .input-section button:hover {
+            background-color: #5a5a5a;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #00ff00; /* Verde para indicar éxito */
+        }
+    </style>
+</head>
+<body>
+    <div class="ficha-auto">
+        <h1>Furgoneta de Escape</h1>
+        <p>Esta es la furgoneta utilizada en el robo. Es crucial conocer todos los detalles.</p>
+        <div class="especificaciones">
+            <h2>Especificaciones del Vehículo</h2>
+            <ul>
+                <li>Color: <b>Rojo</b>
+                <br><span>piensa en las silabas del color dicho</span></li>
+                <li>Marca: pontemount
+                <br><span>debes</span></li>
+                <li>Modelo: Furgoneta Turbo
+                <br><span>modificar</span>
+                </li>
+                <li>Año: 2023
+                <br><span>el</span>
+                </li>
+                <li>Placa: ABC-1234
+                <br><span>codigo</span>
+                </li>
+                <li>Capacidad: 5 personas</li>
+                <br><span>CSS para poder hacerlo mas rapido</span>
+                <li>Número secreto:
+                    <br>pista1 piensa en los colores de un rayo laser
+                    <br>pista2 piensa en la bandera de japon
+                    <br>pista3 piensa en un color llamativo
+                    <br>pista4 piensa en el rayo macqueen
+                    <br>pista5 para encontrarlo deberas buscar zonas de la pantalla que parezcan diferentes cuando pasas el cursor sobre ellas
+                    <br>pista6 recorre la página de arriba a abajo lentamente y observa los detalles
+                    <br>pista7 la clave podría estar al principio o al final, pero solo si observas con cuidado
+                    <br>pista8 ¿te has fijado en todas las palabras que destacan visualmente?
+                    <br><span>9</span> <!-- Número oculto en la parte negra -->
+                </li>
+            </ul>
+        </div>
+        <p class="otluco-oremun">2</p>
+        <p class="otluco-oremun">7</p>
+        <p class="otluco-oremun">5</p>
+        <p>Investiga bien y encuentra todas las pistas para salir de aquí...</p>
+
+        <div class="input-section">
+            <input type="text" id="userInput" placeholder="Introduce el número">
+            <button onclick="checkNumber()">Comprobar</button>
+        </div>
+        <p id="message" class="message"></p>
+    </div>
+
+    <script>
+        function checkNumber() {
+            const userInput = document.getElementById('userInput').value;
+            const message = document.getElementById('message');
+
+            if (userInput === "2") {
+                message.textContent = "¡Excelente! El número que estás buscando es 35.";
+            } else {
+                message.textContent = "Intenta de nuevo. Sigue buscando el número correcto.";
+            }
+        }
+    </script>
+</body>
+</html>
